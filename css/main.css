@@ -1,0 +1,70 @@
+/* typography */
+body,input,textarea{font-family:"light"; font-weight:normal !important}
+strong,b,a,button,.btn,
+input[type="submit"],input[type="button"],input[type="reset"]{font-family:"bold";  font-weight:normal !important}
+
+.btn-large{font-family:"heavy"; font-weight:normal !important}
+
+h1,h2,h3,h4,h5,h6,
+h1 strong, h1 b, h1 a, h2 strong, h2 b, h2 a,
+h3 strong, h3 b, h3 a, h4 strong, h4 b, h4 a,
+h5 strong, h5 b, h5 a, h6 strong, h6 b, h6 a,
+#site-title, #site-slogan {font-family:"black"; font-weight:normal !important}
+
+/* Our markup is SEO awesome but it's Semantically upside-down therefore we... */
+body div{box-sizing:border-box}/* make widths behave */
+
+/* make some room for .pushup and strip the padding,
+ * we'll need some js help here.
+ * @margin-top:716px; (716px) is the actual height of the default .pushup
+ * that height can change for lots of reasons so we'll need to make it dynamic with jQuery
+ * we commented a possible no-js out in .pushup declartion you could choose that route */
+#content{margin-top:716px; position:relative; padding:0}
+
+#content .row-fluid{padding:0 20px}/* put the padding back */
+#content .sidebars{position:absolute; top:0} /* pull up our  sidebars */
+
+.pushup{position:absolute; top:0/* ; max-height:716px; overflow:scroll */} /* and push the top stuff back to the top */
+.no-js .pushup{max-height:716px; overflow:scroll}
+
+.h1,#site-title{font-size:38.5px}
+.h2,#site-slogan{font-size:31.5px}
+
+.navbar .nav li.active{display:none}
+
+/* classy navbar */
+.navbar .navbar-inner{box-shadow:0px 1px 4px #d4d4d4}
+.navbar .nav li a{background-image:linear-gradient(#fff,#e6e6e6); box-shadow:inset 0px 1px 0px 1px rgba(255,255,255,.6)}
+.navbar .nav li a:hover{color:#fff; text-shadow:none; background-image:linear-gradient(#08c,#04c); 
+box-shadow:inset 0px -2px 7px rgba(255,255,255,.3),inset 0px 1px 0px 2px #08c,inset 0px 1px 0px 2px rgba(255,255,255,.2)}
+
+.icons-grid{list-style-type:none; margin: 0}
+.icons-grid .item{display: inline-block; vertical-align: top; width: 30%; background: #e9e9e9; border-radius: 8px; padding: .5em .5em 0; margin: 0 0 .5em; box-sizing: border-box}
+.icons-grid .item span{display: block; text-align: center; margin: 0 0 .5em}
+.icons-grid .item .title{font-family:"black"; font-size: 18px}
+.icons-grid .item .example{font-size: 36px}
+.icons-grid .item .class-name{font-family:"code"}
+
+@media (min-width:768px){ /* <|= iPad Portait */
+/* We think the equal width navbar makes more sense here
+ * Customize the navbar links to be fill the entire space of the .navbar */
+.navbar .navbar-inner{padding:0}
+.navbar .nav{margin:0; display:table; width:100%}
+.navbar .nav li{display:table-cell; width:1%; float:none}
+.navbar .nav li a{font-weight:bold; text-align:center;
+border-left:1px solid rgba(255,255,255,.75); border-right:1px solid rgba(0,0,0,.1)}
+.navbar .nav li:first-child a{border-left:0; border-radius:3px 0 0 3px}
+.navbar .nav li:last-child a{border-right:0; border-radius:0 3px 3px 0}}
+
+@media (max-width:767px){ /* > iPad Portrait */
+.navbar .navbar-inner{padding:0}
+.navbar .nav{display:block; width:100%}
+.navbar .nav li{display:block; width:auto; float:none}
+.navbar .nav li a{display:block; float:none; width:auto; text-align:left; border-bottom:solid 1px #ddd}
+.navbar .nav li:last-child a{border:none}
+
+#content .row-fluid{padding:0; position:relative}	
+.container-fluid{padding-right:20px}
+
+.hero-unit{margin:0 -20px 20px; padding: .5em 20px .25em}
+.hero-unit .btn{display:block}}

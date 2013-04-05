@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Michael Hurley -- Designer/Developer -- @MichaelH_rley
+
+# THANKS
+
+    Mom, Adrienne Mollette
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Modernizr, jQuery, Bootstrap, cssFx,
+    html5forms*[formerly: html5widgets]
